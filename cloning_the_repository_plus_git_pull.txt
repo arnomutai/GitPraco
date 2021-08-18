@@ -1,0 +1,105 @@
+====================================================================================================
+git/09/cloning_the_repository_plus_git_pull.txt - a SpotADev Resource
+====================================================================================================
+====================================================================================================
+
+You should have a git repossitory on github.com that you created in step:
+
+    07/go_and_create_a_repository_on_github_for_your_exercises.txt
+
+Cloning is the name given to copying the remote repository to your local machine.  When you clone a 
+repository you have am exact copy of everything that has ever happened in the repository.
+
+
+====================================================================================================
+Create a directory structure
+====================================================================================================
+
+You can use git for different clients.  It is thus important to organise your files properly. It is 
+recommended you use a different workspace for each client.
+
+In unix a home directory looks like:
+
+    /Users/joebloggs
+
+In unix you can change to the home directory by typing:
+
+    cd ~
+
+Create the following directory structure:
+
+    ~/workspace
+
+To do that:
+
+    cd ~
+    mkdir workspace
+    cd workspace
+    pwd
+    ls
+
+
+====================================================================================================
+How to clone a repository for the first time
+====================================================================================================
+
+On github.com there is a  url for your repository.  It will be something like:
+
+    https://github.com/<your_git_username>/<your_repository_name>
+
+    
+For example if your username is called "codebot" and you named your repository 
+"jd_spotadev_learning" then your url will be something like:
+
+    https://github.com/codebot/jd_spotadev_learning.git
+    
+To clone this empty repository to your computer for the first time type:
+
+    cd ~/workspace
+    git clone https://github.com/codebot/jd_spotadev_learning.git
+
+After cloning you will see a directory something like this:
+    
+    git_joeblogs~/workspace/jd_spotadev_learning
+    
+If your repository is empty, which it is likely empty, when you clone it, you will get a warning
+message that it is empty - this is to be expected.
+
+Change into the directory
+
+    cd git_exercise
+
+
+====================================================================================================
+Seeing what is happening on your local copy of the repository
+====================================================================================================
+
+In git there is the following command for knowing the state of your local copy of the repository:
+
+    git status
+
+"git status" is one of the most used commands.  If you run "git status" in the directory of the 
+recently cloned repository it will show you information including which branch you on.
+
+    cd ~/workspace/jd_spotadev_learning
+    git status
+
+You will see something like:
+
+    On branch master
+    No commits yet
+
+
+
+====================================================================================================
+git pull
+====================================================================================================
+
+Once you have cloned a repository you do not need to clone it again.  The clone command is a one 
+off.
+
+
+If other developers push code to the remote repository, you need to update your local repository.  
+The way you do this is type:
+
+    git pull
